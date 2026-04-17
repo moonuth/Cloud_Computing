@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: courtify-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-courtify}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-courtify123}
+      POSTGRES_DB: ${POSTGRES_DB:-courtify}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - courtify-network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-courtify}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.backend
+    container_name: courtify-backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-courtify}:${POSTGRES_PASSWORD:-courtify123}@postgres:5432/${POSTGRES_DB:-courtify}?schema=public
+      JWT_SECRET: ${JWT_SECRET:-your-super-secret-jwt-key-change-in-production}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-your-super-secret-refresh-key-change-in-production}
+      CORS_ORIGIN: ${CORS_ORIGIN:-*}
+      NODE_ENV: production
+      PORT: 3000
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - courtify-network
+
+  # Frontend (Nginx + React)
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.frontend
+      args:
+        VITE_API_URL: /api
+    container_name: courtify-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - courtify-network
+
+networks:
+  courtify-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

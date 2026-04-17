@@ -1,0 +1,404 @@
+TRƯỜNG ĐH GIAO THÔNG VẬN TẢI TP. HỒ CHÍ MINH
+ĐỀ CƯƠNG CHI TIẾT HỌC PHẦN
+(COURSE SYLLABUS)
+1. Tổng quát về học phần (General course information)
+Tên học phần
+Tiếng Việt: ĐIỆN TOÁN ĐÁM MÂY
+Tiếng Anh: CLOUD COMPUTING 
+Mã HP: 032507
+Số tín chỉ                
+3 (1,2,3)
+Phân bổ thời gian
+LT/Bài tập/ dự án
+Thực hành/ Thí nghiệm/ Thảo luận
+Tổng
+Tự học
+45
+0
+45
+105
+Thang điểm
+10
+HP học trước
+Không
+HP tiên quyết 
+Không
+HP song hành 
+ Không
+Loại học phần
+☐Bắt buộc         ☐Tự chọn bắt buộc        ☐ Tự chọn tự do
+Thuộc thành phần 
+Cơ sở ngành
+2. Mô tả tóm tắt học phần (Course description)
+Đây là học phần thuộc khối kiến thức chuyên ngành của chương trình đào tạo ngành Kỹ thuật Điện tử - viễn thông. Nội dung học phần cung cấp kiến thức nền tảng và chuyên sâu về công nghệ Điện toán đám mây, từ các khái niệm, mô hình dịch vụ (IaaS, PaaS, SaaS), mô hình triển khai (Public, Private, Hybrid) đến kiến trúc và các công nghệ cốt lõi như ảo hóa, container. Đặc biệt, môn học sẽ tập trung vào các ứng dụng và vai trò của đám mây trong lĩnh vực viễn thông hiện đại như Ảo hóa chức năng mạng (NFV), Mạng định nghĩa bằng phần mềm (SDN), Vạn vật kết nối (IoT) và các ứng dụng cho mạng 5G. Mục tiêu là tạo cho sinh viên kỹ năng làm việc độc lập, làm việc nhóm cấu hình dịch vụ và lập trình các ứng dụng đơn giản trên một nền tảng đám mây công cộng lớn (như AWS, Azure hoặc GCP).
+3. Mục tiêu học phần (Course Objectives)
+Học phần này trang bị cho sinh viên:
+CO1. Lựa chọn giải pháp để giải quyết các bài toán Cloud nhằm tối ưu cho hạ tầng mạng và  dịch vụ Điện tử – Viễn thông.
+.
+CO2. Hoàn thiện kỹ năng cần thiết để có thể giải quyết các vấn đề điện toán đám mây cho hệ thống Điện tử – Viễn thông.
+CO3. Hình thành khả năng làm việc độc lập và làm việc theo nhóm trong môi trường công nghiệp, chịu trách nhiệm cá nhân và trách nhiệm đối với nhóm.
+4. Chuẩn đầu ra học phần (Course learning outcomes - CLO)
+Sau khi học xong học phần này sinh viên có khả năng:
+CLO1. Tóm tắt được các qui định của nhà trường và các qui tắc làm việc nhóm, những kiến thức về quản lý hoạt động chuyên môn được thực tập.
+CLO2. Thể hiện đúng kỹ năng giải quyết các vấn đề về xây dựng, thiết kế, vận hành một hệ thống điện toán đám mây.
+CLO3. Thích ứng với công việc độc lập hoặc theo nhóm, chịu trách nhiệm cá nhân và tập thể
+Liên hệ giữa CĐR học phần (CLOs) và CĐR CTĐT (PLOs):
+PLOs/
+CLOs
+PLO1
+PLO2
+PLO3
+PLO4
+PI05
+PLO6
+PLO7
+PLO8
+PLO9
+CLO1
+E
+CLO2
+R
+R
+CLO3
+R
+5. Nhiệm vụ của sinh viên (Students duties)
+Sinh viên phải tham dự tối thiểu 80% số tiết của học phần;
+Làm và nộp các báo cáo/ làm việc nhóm/ thuyết trình.... đúng thời gian quy định;
+Tự nghiên cứu các vấn đề được giao ở nhà hoặc thư viện;
+Hoàn thành các bài đánh giá quá trình; kết thúc học phần.
+6. Phương pháp kiểm tra, đánh giá (Assessment methods):
+Phương pháp kiểm tra đánh giá của HP đảm bảo người học đạt được CĐR mong đợi
+Thành phần đánh giá
+[1]
+Phương pháp/ Hình thức đánh giá
+[2]
+CĐR HP (CLOs)
+[3]
+Tiêu chí đánh giá
+[4]
+Trọng số (%)
+[5]
+Đánh giá quá trình
+Chuyên cần
+CLO3
+A1.1
+10%
+Bài tập cá nhân trên lớp
+CLO1, CLO2, CLO3
+A1.2
+15%
+Bài tập nhóm: Infographic + Thuyết trình về Kiến trúc và Mô hình Dịch vụ Điện toán Đám mây. (Nhóm tối đa 5 sinh viên)
+A1.4
+15%
+A1.5
+10%
+Đánh giá Kết thúc học phần
+Học tập dựa trên dự án – Project Based Learning: Triển khai và đánh giá một ứng dụng trên nền tảng Đám mây : Tạo máy ảo / container trên AWS/Azure/GCP, Triển khai ứng dụng web nhỏ (NodeJS/Python/PHP hoặc tùy chọn,.. (dự án tối đa 5 sinh viên)
+CLO1, CLO2, CLO3
+A2.2
+50%
+Tổng cộng
+100%
+7. Kế hoạch giảng dạy và học tập (Teaching and learning plan/outline)
+Tuần / Chương
+Nội dung
+CLOs
+Hoạt động dạy và học
+Dạng bài đánh giá
+Tuần 1:
+Chương 1: Tổng quan về Điện toán đám mây 
+Lịch sử phát triển và các khái niệm cơ bản.
+5 đặc tính cốt lõi, lợi ích và thách thức.
+Vai trò của đám mây trong viễn thông: Cloud-RAN, NFV, nền tảng IoT.
+Bài tập chương 1
+CLO1,
+CLO3
+   Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.
+A1.1, A1.2
+Tuần 2:
+Chương 2: Các mô hình Dịch vụ và Triển khai 
+Mô hình dịch vụ: IaaS, PaaS, SaaS.
+Mô hình triển khai: Public, Private, Hybrid, Community Cloud
+CLO1,
+CLO2,
+CLO3
+   Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.
+A1.1, A1.2, A1.5
+Tuần 3:
+Chương 3: Công nghệ ảo hóa 
+Kiến trúc tổng quan của một hệ thống đám mây.
+Công nghệ ảo hóa và vai trò của Hypervisor
+CLO1,
+CLO2,
+CLO3
+Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.
+A1.1, A1.2, A1.4, A1.5
+Tuần 4-5:
+Chương 4: Công nghệ Container và Điều phối 
+ So sánh Máy ảo (VMs) và Container.
+ Kiến trúc Docker: Image, Container, Dockerfile, Docker Hub.
+ Điều phối container với Kubernetes (K8s): Kiến trúc, các thành phần chính (Pod, Service, eployment).
+ Ứng dụng của container trong triển khai microservices và các chức năng mạng viễn thông
+CLO1,
+CLO2,
+CLO3
+Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.
+A1.1, A1.2, A1.4, A1.5
+Tuần 6:
+Chương 5: Dịch vụ Tính toán (Compute Services) (3 tiết)
+IaaS: Các loại máy ảo, mô hình định giá.
+Serverless Computing (FaaS - Function as a Service).
+CLO1,
+CLO2,
+CLO3
+Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.
+A1.1, A1.2, A1.4, A1.5
+Tuần 7-8:
+Chương 6: Dịch vụ Lưu trữ và Cơ sở dữ liệu 
+6.1 Các loại lưu trữ: Object Storage, Block Storage, File Storage.
+6.2 Cơ sở dữ liệu trên đám mây: SQL (RDS) và NoSQL (DynamoDB).
+CLO1; CLO2; CLO3
+Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.,
+ A1.1, A1.5
+Tuần 9-10:
+Chương 7: Dịch vụ Mạng (Networking Services)
+Mạng riêng ảo trên đám mây (VPC - Virtual Private Cloud).
+Bảo mật mạng: Security Groups và Network ACLs.
+Kết nối mạng lai (Hybrid Cloud Networking)
+CLO1; CLO2; CLO3
+Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.
+ A1.1, A1.5
+Tuần 11-12: Chương 8: Đám mây và Viễn thông 
+Ảo hóa chức năng mạng (NFV - Network Functions Virtualization): Kiến trúc, thành phần (NFVI, VNF, MANO).
+Mạng định nghĩa bằng phần mềm (SDN - Software-Defined Networking).
+Sự kết hợp Cloud, NFV và SDN trong kiến trúc mạng 5G.
+CLO1; CLO2; CLO3
+Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.
+ A1.1, A1.5
+Tuần 13:
+Chương 9. Đám mây và Vạn vật kết nối (IoT) (3 tiết)
+9.1 Kiến trúc nền tảng IoT trên đám mây.
+9.2 Edge Computing và Cloud Computing
+CLO1; CLO2; CLO3
+Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.
+ A1.1, A1.4; A1.5
+Tuần 14:
+Chương 10. Bảo mật và tối ưu chi phí đám mây (3 tiết)
+10.1 Mô hình Trách nhiệm Chia sẻ (Shared Responsibility Model).
+10.2  Quản lý định danh và truy cập trên đám mây (Cloud IAM).
+10.3 Kinh tế đám mây: Phân tích tổng chi phí sở hữu (TCO) và chiến lược tối ưu hóa chi phí.
+CLO1; CLO2; CLO3
+Giảng viên:  thuyết giảng tạo tình huấn. Sinh viên: tham luận giải quyết vấn đề.
+A1.1, A1.4; A1.5
+Tuần 15
+Đánh giá cuối kì
+CLO1,
+CLO2,
+CLO3,
+Báo cáo: Project Based Learning: Triển khai và đánh giá một ứng dụng trên nền tảng Đám mây : Tạo máy ảo / container trên AWS/Azure/GCP, Triển khai ứng dụng web nhỏ (NodeJS/Python/PHP hoặc tùy chọn,.
+A2.2
+8. Tài liệu học tập (Course materials)
+8.1. Tài liệu chính (Main materials)
+TT
+Tên tác giả
+Năm XB
+Tên sách, giáo trình,
+tên bài báo, văn bản
+NXB, tên tạp chí/
+nơi ban hành VB
+1
+Bộ môn Điện tử viễn thông
+2025
+[1] Tài liệu giảng dạy môn Điện toán đám mây
+Trường ĐHGTVT HCM
+(Cập nhật tài liệu mới trong 5 năm gần đây)
+8.2. Tài liệu tham khảo (References materials)
+TT
+Tên tác giả
+Năm XB
+Tên sách, giáo trình,
+tên bài báo, văn bản
+NXB, tên tạp chí/
+nơi ban hành VB
+2
+Huỳnh Quyết Thắng, 
+2023
+[2] Điện toán đám mây
+Đại học Bách khoa Hà Nội
+3
+Chellammal Surianarayanan, Pethuru Raj Chelliah
+2023
+[3] Essentials of Cloud Computing
+Springer
+4
+Anders Lisdorf
+2021
+[4] Cloud Computing Basics: A Non-Technical Introduction
+Apress
+5
+Saeed Moaveni
+[5] An Introduction to Engineering
+Engineering Fundamentals
+6
+Doanh ngHiệp TTCM
+[6] Tài liệu từ doanh nghiệp mà người học đi TTCM
+Các doanh ngiệp TTCM
+(Cập nhật tài liệu mới trong 5 năm gần đây)
+9. Yêu cầu khác về học phần (Other course requirements and expectations)
+- Sinh viên cần chủ động liên hệ với giảng viên khi gặp khó khăn trong việc tìm hiểu tài liệu, làm bài tập ... Giảng viên sẵn sàng tư vấn và hỗ trợ sinh viên ngoài giờ lên lớp thông qua email hoặc trong giờ hành chính.
+- Sinh viên được khích lệ đặt câu hỏi, phản biện và thể hiện quan điểm riêng trong quá trình học, miễn là có căn cứ khoa học và thái độ tôn trọng người khác. Tinh thần cầu thị và ham học hỏi sẽ giúp sinh viên phát triển tư duy nghiên cứu độc lập.
+- Hướng dẫn tự học: Sinh viên tự đọc phần tài liệu tham khảo và làm bài tập ở nhà bổ trợ cho kiến thức được học từng chương, từng phần theo hướng dẫn cụ thể của giảng viên giảng dạy.
+10. Biên soạn và cập nhật đề cương (write and revise course syllabus) 
+- Ngày biên soạn lần đầu: 8/20025.
+- Ngày chỉnh sửa: 8/2025 (chỉnh sửa lần thứ 1).
+PHÒNG ĐÀO TẠO
+QLCTĐT
+GV LẬP ĐỀ CƯƠNG
+                                                            Lê Anh Uyên Vũ                      Trần Văn Thọ
+PHỤ LỤC
+(Phụ lục của Đề cương chi tiết học phần)
+Phụ lục 1. Các Rubrics đánh giá
+Rubric A1.1. Chuyên cần
+Tiêu chí đánh giá
+Mức độ đạt chuẩn quy định
+Trọng số 
+MỨC 1
+(0-3.9)
+MỨC 2
+(4.0-5.4)
+MỨC 3
+(5.5-6.9)
+MỨC 4
+(7.0-8.4)
+MỨC 5
+(8.5-10)
+Tần suất tham dự lớp học
+Tham dự ít hơn 80% số tiết học
+Tham dự 80-84% số tiết học 
+Tham dự từ 85-89% số tiết học 
+Tham dự từ 90-94% số tiết học 
+Tham dự từ 95% số tiết học 
+80%
+Mức độ đóng góp
+Không phát biểu xây dựng
+1-2 lần phát biểu
+3-4 lần phát biểu
+5-6 lần phát biểu
+Trên 6 lần phát biểu 
+20%
+Rubric A1.2: Bài tập - thực hành
+Tiêu chí đánh giá
+Mức độ đạt chuẩn quy định
+Trọng số 
+MỨC 1
+(0-3.9)
+MỨC 2
+(4.0-5.4)
+MỨC 3
+(5.5-6.9)
+MỨC 4
+(7.0-8.4)
+MỨC 5
+(8.5-10)
+Thái độ tham dự tích cực
+Thực hiện từ dưới 40% số bài
+Thực hiện từ 40-54% số bài
+Thực hiện từ 55-69% số bài
+Thực hiện từ 70-84% số bài
+Thực hiện từ 85% số bài trở lên
+40%
+Chất lượng bài nộp
+Hoàn thành đúng từ dưới 39% yêu cầu
+Hoàn thành đúng từ 40-54% yêu cầu trở lên
+Hoàn thành đúng từ 55-69% yêu cầu trở lên
+Hoàn thành đúng từ 70-84% yêu cầu trở lên
+Hoàn thành đúng 85% yêu cầu trở lên
+60%
+Rubric A1.4: Thuyết trình (theo nhóm)
+Tiêu chí đánh giá
+Mức độ đạt chuẩn quy định
+Trọng số 
+MỨC F
+(0-3.9)
+MỨC D
+(4.0-5.4)
+MỨC C
+(5.5-6.9)
+MỨC B
+(7.0-8.4)
+MỨC A
+(8.5-10)
+Nội dung và cấu trúc
+Không thuyết trình
+Thiếu chính xác, khoa học, nhiều sai sót quan trọng, thiếu logic
+Tương đối chính xác, khoa học, logic nhưng còn 1 sai sót quan trọng.
+Khá chính xác khoa học, logic, còn vài sai sót nhỏ
+Chính xác khoa học, logic
+40%
+Kỹ năng trình bày
+Không thuyết trình
+Trình bày không rõ ràng, người nghe không hiểu được các nội dung quan trọng.
+Khó theo dõi nhưng vẫn có thể hiểu được các nội dung quan trọng, vượt quá thời lượng quy định.
+Trình bày rõ ràng nhưng chưa lôi cuốn, lập luận khá thuyết phục, không đảm bảo thời lượng.
+Dẫn dắt vấn đề và lập luận lôi cuốn, thuyết phục, thời lượng phù hợp
+40%
+Trả lời câu hỏi 
+Không thuyết trình
+Không trả lời được đa số câu hỏi đặt đúng.
+Trả lời đúng đa số câu hỏi, nhưng chưa nêu được định hướng  phù hợp đối với những câu hỏi chưa trả lời được.
+Trả lời đúng đa số câu hỏi đúng, và nêu được định hướng  phù hợp đối với những câu hỏi chưa trả lời được.
+Các câu hỏi đặt đúng đều được nhóm thảo luận và trả lời đầy đủ, rõ ràng và thỏa  đáng
+20%
+Rubric A1.5: Cá nhân trong làm việc nhóm
+Tiêu chí đánh giá
+Mức độ đạt chuẩn quy định
+Trọng số 
+MỨC F
+(0-3.9)
+MỨC D
+(4.0-5.4)
+MỨC C
+(5.5-6.9)
+MỨC B
+(7.0-8.4)
+MỨC A
+(8.5-10)
+Thời gian tham gia họp nhóm đầy đủ 
+Không tham gia
+Chia đều cho số lần họp nhóm.
+30%
+Chất lượng đóng góp ý kiến
+Không hữu ích
+Ít hữu ích
+Tương đối hữu ích
+Hữu ích
+Sáng tạo/ rất hữu ích
+30%
+Chất lượng sản phẩm giao nộp
+Không sử dụng được.
+Ít đáp ứng, nhiều sai sót quan trọng
+Đáp ứng một phần yêu cầu, còn sai sót quan trọng
+Đáp ứng khá tốt yêu cầu
+Đáp ứng tốt/sáng tạo
+40%
+Rubric A2.1 Bài thi cuối kỳ
+Tiêu chí đánh giá
+Mức độ đạt chuẩn quy định
+Trọng số 
+MỨC 1
+(0-3.9)
+MỨC 2
+(4.0-5.4)
+MỨC 3
+(5.5-6.9)
+MỨC 4
+(7.0-8.4)
+MỨC 5
+(8.5-10)
+Kết quả bài thi cuối kỳ
+Làm đúng dưới 40% nội dung của đề thi
+Làm đúng từ 40% nội dung của đề thi
+Làm đúng từ 55% nội dung của đề thi
+Làm đúng từ 70% nội dung của đề thi
+Làm đúng từ 85% nội dung của đề thi
+100%
