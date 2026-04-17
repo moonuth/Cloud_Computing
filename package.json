@@ -14,6 +14,7 @@
         "build": "npm run build --workspaces",
         "build:backend": "npm run build --workspace=@courtify/backend",
         "build:frontend": "npm run build --workspace=@courtify/frontend",
+        "start": "npm run build:backend && node apps/backend/dist/index.js",
         "db:generate": "npm run db:generate --workspace=@courtify/backend",
         "db:push": "npm run db:push --workspace=@courtify/backend",
         "db:migrate": "npm run db:migrate --workspace=@courtify/backend",
