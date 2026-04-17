@@ -38,10 +38,10 @@ router.get('/invoices', authenticate, authorize('ADMIN', 'MANAGER'), async (req:
         });
 
         // Prepare data for Excel
-        const data = invoices.map((inv) => ({
+        const data = invoices.map((inv: any) => ({
             'Số hóa đơn': inv.invoiceNumber,
             'Khách hàng': inv.customer?.name || 'Khách lẻ',
-            'SĐT': inv.customer?.phone || '',
+            'SĐT':inv.customer?.phone || '',
             'Tạm tính': inv.subtotal,
             'Giảm giá': inv.discount,
             'Tổng cộng': inv.total,
@@ -115,7 +115,7 @@ router.get('/bookings', authenticate, authorize('ADMIN', 'MANAGER'), async (req:
         });
 
         // Prepare data for Excel
-        const data = bookings.map((b) => ({
+        const data = bookings.map((b: any) => ({
             'Sân': b.court.name,
             'Khách hàng': b.customer?.name || 'Khách lẻ',
             'SĐT': b.customer?.phone || '',
@@ -158,7 +158,7 @@ router.get('/customers', authenticate, authorize('ADMIN', 'MANAGER'), async (req
             orderBy: { name: 'asc' },
         });
 
-        const data = customers.map((c) => ({
+        const data = customers.map((c: any) => ({
             'Họ tên': c.name,
             'SĐT': c.phone,
             'Email': c.email || '',
@@ -223,7 +223,7 @@ router.get('/revenue-report', authenticate, authorize('ADMIN', 'MANAGER'), async
         // Group by date
         const dailyMap = new Map<string, { revenue: number; count: number }>();
 
-        invoices.forEach((inv) => {
+        invoices.forEach((inv: any) => {
             const dateKey = format(new Date(inv.paidAt!), 'dd/MM/yyyy');
             const existing = dailyMap.get(dateKey) || { revenue: 0, count: 0 };
             dailyMap.set(dateKey, {
@@ -232,14 +232,14 @@ router.get('/revenue-report', authenticate, authorize('ADMIN', 'MANAGER'), async
             });
         });
 
-        const data = Array.from(dailyMap.entries()).map(([date, stats]) => ({
+        const data = Array.from(dailyMap.entries()).map(([date, stats]: [string, { revenue: number; count: number }]) => ({
             'Ngày': date,
             'Số hóa đơn': stats.count,
             'Doanh thu': stats.revenue,
         }));
 
         // Add summary row
-        const totalRevenue = invoices.reduce((sum, inv) => sum + inv.total, 0);
+        const totalRevenue = invoices.reduce((sum: number, inv: any) => sum + inv.total, 0);
         data.push({
             'Ngày': 'TỔNG CỘNG',
             'Số hóa đơn': invoices.length,

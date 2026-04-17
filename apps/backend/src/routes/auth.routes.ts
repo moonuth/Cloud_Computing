@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
 import { authService } from '../services/auth.service.js';
 import { authenticate } from '../middleware/auth.js';
@@ -23,7 +23,7 @@ const refreshSchema = z.object({
 });
 
 // Routes
-router.post('/login', async (req, res, next) => {
+router.post('/login', async (req: Request, res: Response, next: NextFunction) => {
     try {
         const data = loginSchema.parse(req.body);
         const result = await authService.login(data);
@@ -38,7 +38,7 @@ router.post('/login', async (req, res, next) => {
     }
 });
 
-router.post('/register', async (req, res, next) => {
+router.post('/register', async (req: Request, res: Response, next: NextFunction) => {
     try {
         const data = registerSchema.parse(req.body);
         const result = await authService.register(data);
@@ -53,7 +53,7 @@ router.post('/register', async (req, res, next) => {
     }
 });
 
-router.post('/refresh', async (req, res, next) => {
+router.post('/refresh', async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { refreshToken } = refreshSchema.parse(req.body);
         const tokens = await authService.refreshToken(refreshToken);
@@ -67,7 +67,7 @@ router.post('/refresh', async (req, res, next) => {
     }
 });
 
-router.post('/logout', authenticate, async (req, res, next) => {
+router.post('/logout', authenticate, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const refreshToken = req.body.refreshToken;
         await authService.logout(req.user!.userId, refreshToken);
@@ -81,7 +81,7 @@ router.post('/logout', authenticate, async (req, res, next) => {
     }
 });
 
-router.get('/me', authenticate, async (req, res, next) => {
+router.get('/me', authenticate, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const user = await authService.getProfile(req.user!.userId);
 
@@ -99,7 +99,7 @@ const changePasswordSchema = z.object({
     newPassword: z.string().min(6, 'Mật khẩu mới phải có ít nhất 6 ký tự'),
 });
 
-router.post('/change-password', authenticate, async (req, res, next) => {
+router.post('/change-password', authenticate, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const { currentPassword, newPassword } = changePasswordSchema.parse(req.body);
         const result = await authService.changePassword(req.user!.userId, currentPassword, newPassword);
@@ -113,7 +113,7 @@ router.post('/change-password', authenticate, async (req, res, next) => {
     }
 });
 
-router.post('/logout-all', authenticate, async (req, res, next) => {
+router.post('/logout-all', authenticate, async (req: Request, res: Response, next: NextFunction) => {
     try {
         const result = await authService.logoutAllDevices(req.user!.userId);
 

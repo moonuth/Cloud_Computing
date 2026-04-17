@@ -247,7 +247,7 @@ export class RecurringBookingService {
             }
         }
 
-        return Array.from(groups.entries()).map(([groupId, groupBookings]) => ({
+        return Array.from(groups.entries()).map(([groupId, groupBookings]: [string, any[]]) => ({
             recurringGroupId: groupId,
             court: groupBookings[0].court,
             customer: groupBookings[0].customer,

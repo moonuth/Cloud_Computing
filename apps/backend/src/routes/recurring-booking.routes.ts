@@ -9,8 +9,8 @@ const router = Router();
 const createRecurringSchema = z.object({
     courtId: z.string(),
     customerId: z.string().optional(),
-    startDate: z.string().transform(s => new Date(s)),
-    endDate: z.string().transform(s => new Date(s)),
+    startDate: z.string().transform((s: string) => new Date(s)),
+    endDate: z.string().transform((s: string) => new Date(s)),
     startTime: z.string().regex(/^\d{2}:\d{2}$/),
     endTime: z.string().regex(/^\d{2}:\d{2}$/),
     daysOfWeek: z.array(z.number().min(0).max(6)),

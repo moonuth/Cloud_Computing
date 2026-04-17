@@ -109,7 +109,7 @@ export class CourtService {
     async reorder(venueId: string, courtIds: string[]) {
         // Update sort order for each court
         await Promise.all(
-            courtIds.map((id, index) =>
+            courtIds.map((id: string, index: number) =>
                 prisma.court.updateMany({
                     where: { id, venueId },
                     data: { sortOrder: index + 1 },

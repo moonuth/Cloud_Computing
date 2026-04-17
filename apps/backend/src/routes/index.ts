@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import authRoutes from './auth.routes.js';
 import venueRoutes from './venue.routes.js';
 import courtRoutes from './court.routes.js';
@@ -14,7 +14,7 @@ import recurringBookingRoutes from './recurring-booking.routes.js';
 const router = Router();
 
 // Health check
-router.get('/health', (req, res) => {
+router.get('/health', (req: Request, res: Response) => {
     res.json({
         success: true,
         message: 'Courtify API is running',
