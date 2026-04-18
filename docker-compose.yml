@@ -5,35 +5,31 @@ services:
     image: postgres:15-alpine
     container_name: courtify_db
     environment:
-      POSTGRES_USER: ${DB_USER:-courtify}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-courtify123}
-      POSTGRES_DB: ${DB_NAME:-courtify_dev}
+      POSTGRES_USER: courtify
+      POSTGRES_PASSWORD: courtify123
+      POSTGRES_DB: courtify_dev
     ports:
-      - "${DB_PORT:-5432}:5432"
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-courtify}"]
-      interval: 10s
+      test: ["CMD-SHELL", "pg_isready -U courtify"]
+      interval: 5s
       timeout: 5s
       retries: 5
     networks:
       - courtify_network
 
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     container_name: courtify_app
     ports:
-      - "${PORT:-3000}:3000"
+      - "3000:3000"
     environment:
-      NODE_ENV: ${NODE_ENV:-production}
-      DATABASE_URL: postgresql://${DB_USER:-courtify}:${DB_PASSWORD:-courtify123}@postgres:5432/${DB_NAME:-courtify_dev}
-      JWT_SECRET: ${JWT_SECRET:-your-secret-key-change-this}
+      NODE_ENV: production
+      DATABASE_URL: postgresql://courtify:courtify123@postgres:5432/courtify_dev
+      JWT_SECRET: your-secret-key-12345
       PORT: 3000
-      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3001}
-      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:3001,http://20.197.12.68:3001}
     depends_on:
       postgres:
         condition: service_healthy
@@ -45,10 +41,12 @@ services:
     image: nginx:alpine
     container_name: courtify_frontend
     ports:
-      - "3001:3001"
+      - "3001:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./apps/frontend/dist:/app/apps/frontend/dist:ro
+    # Chia sẻ file hệ thống từ container app sang nginx
+    volumes_from:
+      - app
     depends_on:
       - app
     networks:
