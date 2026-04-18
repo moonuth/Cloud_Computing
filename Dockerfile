@@ -46,6 +46,9 @@ COPY --from=builder /app/apps/frontend/dist ./apps/frontend/dist
 COPY apps/backend/.env* ./apps/backend/
 COPY .env* ./
 
+# Khai báo volume để chia sẻ code Frontend cho Nginx
+VOLUME ["/app/apps/frontend/dist"]
+
 # Set NODE_ENV to production
 ENV NODE_ENV=production
 ENV PORT=3000
