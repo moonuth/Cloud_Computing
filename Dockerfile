@@ -27,7 +27,8 @@ COPY package*.json ./
 COPY apps/backend/package*.json ./apps/backend/
 
 RUN npm install --omit=dev && \
-    npm install -g prisma
+    npm install -g prisma && \
+    npx prisma generate --schema=apps/backend/prisma/schema.postgresql.prisma
 
 # Copy built backend from builder
 COPY --from=builder /app/apps/backend/dist ./apps/backend/dist
