@@ -23,6 +23,9 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Install only production dependencies
+# Cài đặt openssl cho Prisma
+RUN apk add --no-cache openssl
+
 COPY package*.json ./
 COPY apps/backend/package*.json ./apps/backend/
 
